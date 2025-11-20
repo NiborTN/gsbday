@@ -99,7 +99,7 @@ export default function Home() {
             objectFit: "fill",
           }}
         >
-          <source src="/background.webm" type="video/webm" />
+          <source src="/gsbday/background.webm" type="video/webm" />
         </video>
         <motion.div
           className="absolute inset-0 bg-gradient-to-br from-[#0a0e1a]/50 via-transparent to-[#0a0e1a]/50"

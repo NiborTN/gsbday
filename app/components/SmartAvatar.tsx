@@ -68,7 +68,7 @@ export default function SmartAvatar({ currentSection }: SmartAvatarProps) {
         layoutId="avatar-container"
       >
         <Image 
-          src="/Fairy-avatar.webp" 
+          src="/gsbday/Fairy-avatar.webp" 
           alt="Birthday Fairy" 
           fill
           className="object-contain"
