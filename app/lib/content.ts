@@ -28,7 +28,7 @@ export const CONTENT = {
     "[REASON_10 - Replace with your tenth reason]",
   ],
 
-  AUDIO_FILE_URL: "/gsbday/birthday-voic.m4a",
+  AUDIO_FILE_URL: "/gsbday/birthday-voic.mp3",
 
   PHOTOS: [
     "/gsbday/slidshow/WhatsApp%20Image%202025-11-20%20at%2004.09.23_a69f43d1.jpg",

@@ -24,12 +24,19 @@ export default function AudioPlayer({ audioUrl }: AudioPlayerProps) {
 
     const setAudioTime = () => setCurrentTime(audio.currentTime)
 
+    const handleError = (e: Event) => {
+      console.error('Audio loading error:', e)
+    }
+
     audio.addEventListener('loadeddata', setAudioData)
     audio.addEventListener('timeupdate', setAudioTime)
+    audio.addEventListener('error', handleError)
+    audio.addEventListener('canplaythrough', () => console.log('Audio can play through'))
 
     return () => {
       audio.removeEventListener('loadeddata', setAudioData)
       audio.removeEventListener('timeupdate', setAudioTime)
+      audio.removeEventListener('error', handleError)
     }
   }, [])
 
@@ -85,7 +92,11 @@ export default function AudioPlayer({ audioUrl }: AudioPlayerProps) {
           animate={{ opacity: 1, scale: 1 }}
           className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-purple-soft"
         >
-          <audio ref={audioRef} src={audioUrl} />
+          <audio ref={audioRef} preload="metadata">
+            <source src={audioUrl} type="audio/mp4" />
+            <source src={audioUrl.replace('.m4a', '.mp3')} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
           
           {/* Play/Pause Button */}
           <div className="flex items-center space-x-4">
