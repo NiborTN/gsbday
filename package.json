@@ -15,7 +15,6 @@
     "canvas-confetti": "^1.9.2",
     "framer-motion": "^10.16.4",
     "next": "14.0.0",
-    "now-php": "^0.0.10",
     "react": "^18",
     "react-dom": "^18"
   },
